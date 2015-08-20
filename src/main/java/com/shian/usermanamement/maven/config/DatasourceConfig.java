@@ -1,0 +1,37 @@
+package com.shian.usermanamement.maven.config;
+
+import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import javax.sql.DataSource;
+
+/**
+ * Created by shian_mac on 8/19/15.
+ */
+@Configuration
+public class DatasourceConfig {
+
+    private String url = "jdbc:mysql://localhost:3306/mysql";
+    private String userName = "root";
+    private String passWord = "root";
+
+//	@Bean
+//	public PoolDataSourceBeanPostProcessor poolDataSourceBeanPostProcessor() {
+//		return new PoolDataSourceBeanPostProcessor();
+//	}
+
+    @Bean
+    public DataSource dataSource() throws Exception {
+
+        MysqlDataSource dataSource = new MysqlDataSource();
+        dataSource.setURL(this.url);
+        dataSource.setPassword(this.passWord);
+        dataSource.setUser(this.userName);
+
+        return dataSource;
+
+    }
+
+}
+
