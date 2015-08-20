@@ -9,7 +9,6 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
  * Created by shian_mac on 8/19/15.
  */
 @Configuration
-@PropertySource("classpath:application.properties")
 public class ApplicationConfig {
 
     /**

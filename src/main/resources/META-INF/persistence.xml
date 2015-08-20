@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+             version="1.0">
+
+    <persistence-unit name="application" transaction-type="RESOURCE_LOCAL">
+
+        <mapping-file>META-INF/orm.xml</mapping-file>
+
+        <class>com.fruit.usermanagement.backend.bean.User</class>
+        <class>com.fruit.usermanagement.backend.bean.Facility</class>
+
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+
+        <properties>
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" />
+            <property name="hibernate.hbm2ddl.auto" value="none" />
+
+            <property name="hibernate.ejb.naming_strategy" value="org.hibernate.cfg.ImprovedNamingStrategy" />
+
+        </properties>
+
+    </persistence-unit>
+
+</persistence>
