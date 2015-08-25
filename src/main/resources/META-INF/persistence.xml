@@ -7,7 +7,7 @@
     <persistence-unit name="application" transaction-type="RESOURCE_LOCAL">
 
         <mapping-file>META-INF/orm.xml</mapping-file>
-        
+
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
 
         <properties>
