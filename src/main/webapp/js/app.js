@@ -5,6 +5,8 @@
  * Created by shian_mac on 8/16/15.
  */
 'use strict';
+require('angular/angular');
+
 
 var AngularSpringApp = {};
 

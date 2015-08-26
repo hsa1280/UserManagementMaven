@@ -1,0 +1,28 @@
+{
+  "name": "UserManagementMaven",
+  "version": "1.0.0",
+  "description": "http://localhost:8080/html/facilityHome.html",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "angular": "^1.4.4"
+
+  },
+  "devDependencies": {
+    "browserify": "^11.0.1",
+    "grunt-browserify": "^4.0.0",
+    "grunt": "0.4.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hsa1280/UserManagementMaven.git"
+  },
+  "author": "Shian Huang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hsa1280/UserManagementMaven/issues"
+  },
+  "homepage": "https://github.com/hsa1280/UserManagementMaven"
+}

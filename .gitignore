@@ -1,2 +1,5 @@
 UserManagementMaven.iml
 target/
+.idea/
+node_modules/
+src/main/webapp/appbuild.js
