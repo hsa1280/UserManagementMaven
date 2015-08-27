@@ -1,8 +1,10 @@
 package com.shian.usermanamement.maven.service.impl;
 
 import com.shian.usermanamement.maven.bean.Facility;
+import com.shian.usermanamement.maven.bean.Product;
 import com.shian.usermanamement.maven.bean.User;
 import com.shian.usermanamement.maven.repository.jpa.FacilityRepository;
+import com.shian.usermanamement.maven.repository.jpa.ProductRepository;
 import com.shian.usermanamement.maven.repository.jpa.UserRepository;
 import com.shian.usermanamement.maven.service.IUserManagementService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +22,9 @@ public class UserManagementServiceImpl implements IUserManagementService {
 
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private ProductRepository productRepository;
 
     /***************************User*******************************/
     @Override
@@ -140,6 +145,11 @@ public class UserManagementServiceImpl implements IUserManagementService {
         this.userRepository = userRepository;
     }
 
+    /***************************Product*******************************/
+    @Override
+    public List<Product> getProducts() {
+        return productRepository.findAll();
+    }
 
 }
 

@@ -1,6 +1,7 @@
 package com.shian.usermanamement.maven.service;
 
 import com.shian.usermanamement.maven.bean.Facility;
+import com.shian.usermanamement.maven.bean.Product;
 import com.shian.usermanamement.maven.bean.User;
 
 import java.util.List;
@@ -43,6 +44,9 @@ public interface IUserManagementService {
     public List<Facility> getFacilityByAddress(String name);
 
     public List<Facility> getAllFacilities();
+
+    //******************Product************************************
+    public List<Product> getProducts();
 
 }
 
