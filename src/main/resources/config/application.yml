@@ -5,4 +5,9 @@ spring:
         driverClassName: com.mysql.jdbc.Driver
         url: jdbc:mysql://localhost/test
 server:
-    port: 8080
+    port: 8081
+
+db:
+    url: jdbc:mysql://localhost:3306/mysql
+    userName: root
+    passWord: root

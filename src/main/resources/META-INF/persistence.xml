@@ -8,12 +8,16 @@
 
         <mapping-file>META-INF/orm.xml</mapping-file>
 
+        <class>com.shian.usermanamement.maven.bean.Product</class>
+        <class>com.shian.usermanamement.maven.bean.User</class>
+        <class>com.shian.usermanamement.maven.bean.Facility</class>
+
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
 
         <properties>
 
             <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" />
-            <property name="hibernate.hbm2ddl.auto" value="none" />
+            <property name="hibernate.hbm2ddl.auto" value="create" />
 
             <property name="hibernate.ejb.naming_strategy" value="org.hibernate.cfg.ImprovedNamingStrategy" />
 

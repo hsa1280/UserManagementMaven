@@ -1,6 +1,6 @@
 package com.shian.usermanamement.maven.config;
 
-import org.hibernate.ejb.HibernatePersistence;
+import org.hibernate.jpa.HibernatePersistenceProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.*;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
@@ -66,7 +66,7 @@ public class ServiceConfig {
 
         LocalContainerEntityManagerFactoryBean entityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
 
-        entityManagerFactoryBean.setPersistenceProvider( new HibernatePersistence() );
+        entityManagerFactoryBean.setPersistenceProvider( new HibernatePersistenceProvider() );
         entityManagerFactoryBean.setDataSource( this.dataSource );
 
         HibernateJpaVendorAdapter jpaVendorAdapter = new HibernateJpaVendorAdapter();
