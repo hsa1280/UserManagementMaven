@@ -47,6 +47,7 @@ public interface IUserManagementService {
 
     //******************Product************************************
     public List<Product> getProducts();
+    public Product saveProduct(Product product);
 
 }
 

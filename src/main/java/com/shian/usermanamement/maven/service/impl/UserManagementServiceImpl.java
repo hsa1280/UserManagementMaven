@@ -112,13 +112,13 @@ public class UserManagementServiceImpl implements IUserManagementService {
     @Override
     public List<Facility> getFacilityByName( String name ) {
 
-        return getFacilityRepository().findByName( name );
+        return getFacilityRepository().findByName(name);
     }
 
     @Override
     public List<Facility> getFacilityByAddress( String name ) {
 
-        return getFacilityRepository().findByAddress( name );
+        return getFacilityRepository().findByAddress(name);
     }
 
 
@@ -149,6 +149,11 @@ public class UserManagementServiceImpl implements IUserManagementService {
     @Override
     public List<Product> getProducts() {
         return productRepository.findAll();
+    }
+
+    @Override
+    public Product saveProduct(Product product) {
+        return productRepository.save(product);
     }
 
 }
