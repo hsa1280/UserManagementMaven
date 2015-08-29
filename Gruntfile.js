@@ -3,7 +3,7 @@ module.exports = function(grunt) {
 		browserify: {
 			js: {
 				// A single entry point for our app
-				src: 'src/main/webapp/js/app.js',
+				src: 'src/main/webapp/controllers/*.js',
 				dest: 'src/main/webapp/appbuild.js',
 			}
 		},

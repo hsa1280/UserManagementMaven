@@ -7,7 +7,9 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "angular": "^1.4.4"
+    "angular": "^1.4.4",
+    "angular-resource": "^1.4.4",
+    "angular-route": "^1.4.5"
 
   },
   "devDependencies": {
