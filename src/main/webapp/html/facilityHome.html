@@ -5,12 +5,22 @@
         <title>User Management Maven</title>
     </head>
     <body>
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js"></script>
         <script src="../appbuild.js"></script>
-        <div ng-controller="GreetingController">
-            <div ng-repeat="facility in data">
-                name: {{facility.name}} &nbsp; address: {{facility.address}}
-            </div>
-        </div>
+            <table style="width:100%" ng-controller="GreetingController" border="1">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>rice</th>
+                    <th>Category</th>
+                </tr>
+                <tr ng-repeat="product in data">
+                    <td>{{product.id}}</td>
+                    <td>{{product.name}}</td>
+                    <td>{{product.description}}</td>
+                    <td>{{product.price}}</td>
+                    <td>{{product.category}}</td>
+                </tr>
+            </table>
     </body>
 </html>

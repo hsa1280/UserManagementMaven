@@ -13,7 +13,7 @@ var AngularSpringApp = {};
 var App = angular.module('AngularUserManagementApp', []);
 
 App.controller('GreetingController', ['$scope', '$http', function($scope, $http) {
-    $http.get('/facility').success(function(response) {
+    $http.get('/api/products').success(function(response) {
         $scope.data = response;
     }).error(function(response) {
         $scope.error = response;
