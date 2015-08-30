@@ -6,6 +6,7 @@ spring:
         url: jdbc:mysql://localhost/test
 server:
     port: 8080
+    contextPath: /UserManagementMaven
 
 db:
     url: jdbc:mysql://localhost:3306/mysql

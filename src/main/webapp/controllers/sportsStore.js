@@ -3,7 +3,7 @@
 //require('angular-route/angular-route');
 
 angular.module("sportsStore")
-    .constant("dataUrl", "/api/products")
+    .constant("dataUrl", "/UserManagementMaven/api/products")
     .controller("sportsStoreCtrl", function ($scope, $http, $location, 
         dataUrl, cart) {
 
