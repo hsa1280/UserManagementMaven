@@ -4,4 +4,7 @@ The problems I faced:
 1. When using spring-boot, there is no need to create a web.xml
 2. Place the application.properties under resources folder directly, so @value can find the values
 3. Hibernate field 'id' doesn't have a default value, we need to add AUTO_INCREMENT for the id field when creating a table.
-4. Why
+4. If we use normal web.xml to config our app, then the project path will be: localhost:8080/projectName/<url-pattern>/html file, this rule also applies to any api call, one example is
+$http.get('/UserManagement/page/data')
+5. If we use spring-boot, there is no web.xml and WebApplicationConfig to define the viewResolver, so the project path will be: localhost:8080/html file, this rule also applies to any api call; we can
+add a path parameter to the project path by adding it in the server: contextPath: /UserManagementMaven, which is in resources/config/application.yml
