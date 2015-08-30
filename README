@@ -1,1 +1,7 @@
-http://localhost:8080/html/facilityHome.html
+http://localhost:8080/app.html
+
+The problems I faced:
+1. When using spring-boot, there is no need to create a web.xml
+2. Place the application.properties under resources folder directly, so @value can find the values
+3. Hibernate field 'id' doesn't have a default value, we need to add AUTO_INCREMENT for the id field when creating a table.
+4. Why

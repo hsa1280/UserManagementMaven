@@ -25,11 +25,6 @@ public class DatasourceConfig {
     @Value("${db.passWord}")
     private String passWord;
 
-//	@Bean
-//	public PoolDataSourceBeanPostProcessor poolDataSourceBeanPostProcessor() {
-//		return new PoolDataSourceBeanPostProcessor();
-//	}
-
     @Bean
     public DataSource dataSource() throws Exception {
 
