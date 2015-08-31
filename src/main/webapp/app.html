@@ -2,42 +2,43 @@
 <html ng-app="sportsStore">
 <head>
     <title>SportsStore</title>
-    <script src="angular.js"></script>
+    <!--<script src="angular.js"></script>-->
+    <script src="appbuild.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-    <script>
-        angular.module("sportsStore", ["customFilters", "cart", "ngRoute"])
-        .config(function($routeProvider) {
+    <!--<script>-->
+        <!--angular.module("sportsStore", ["customFilters", "cart", "ngRoute"])-->
+        <!--.config(function($routeProvider) {-->
 
-            $routeProvider.when("/checkout", {
-                templateUrl: "views/checkoutSummary.html"
-            });
+            <!--$routeProvider.when("/checkout", {-->
+                <!--templateUrl: "views/checkoutSummary.html"-->
+            <!--});-->
 
-            $routeProvider.when("/products", {
-                templateUrl: "views/productList.html"
-            });
+            <!--$routeProvider.when("/products", {-->
+                <!--templateUrl: "views/productList.html"-->
+            <!--});-->
 
-            $routeProvider.when("/complete", {
-                templateUrl: "views/thankYou.html"
-            });
+            <!--$routeProvider.when("/complete", {-->
+                <!--templateUrl: "views/thankYou.html"-->
+            <!--});-->
 
-            $routeProvider.when("/placeOrder", {
-                templateUrl: "views/placeOrder.html"
-            });
+            <!--$routeProvider.when("/placeOrder", {-->
+                <!--templateUrl: "views/placeOrder.html"-->
+            <!--});-->
 
-            $routeProvider.otherwise({
-                templateUrl: "views/productList.html"
-            });
-        });
-    </script>
+            <!--$routeProvider.otherwise({-->
+                <!--templateUrl: "views/productList.html"-->
+            <!--});-->
+        <!--});-->
+    <!--</script>-->
     <script src="controllers/sportsStore.js"></script>
     <script src="filters/customFilters.js"></script>
     <script src="controllers/productListControllers.js"></script>
     <script src="components/cart/cart.js"></script>
-    <script src="angular-route.js"></script>
+    <!--<script src="angular-route.js"></script>-->
     <script src="controllers/checkoutController.js"></script>
 </head>
 <body ng-controller="sportsStoreCtrl">
