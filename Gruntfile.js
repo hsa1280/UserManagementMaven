@@ -1,23 +1,26 @@
 module.exports = function(grunt) {
 	grunt.initConfig({
-		browserify: {
-			js: {
-				// A single entry point for our app
-				src: 'src/main/webapp/app.js',
-				dest: 'src/main/webapp/appbuild.js',
-			}
-		},
-
-		//browserify:{
-		//	dist:{
-		//		options:{
-		//			transform:[['babelify',{'loose':"all"}]]
-		//		},
-		//		files: {
-		//			'src/main/webapp/appbuild.js':['src/main/webapp/test/*.js']
-		//		}
+		//browserify: {
+		//	js: {
+		//		// A single entry point for our app
+		//		src: 'src/main/webapp/app.js',
+		//		dest: 'src/main/webapp/appbuild.js',
 		//	}
 		//},
+
+		browserify:{
+			dist:{
+				options:{
+					transform:[['babelify',{'loose':"all"}]],
+					browserifyOptions: {
+						debug: true
+					}
+				},
+				files: {
+					'src/main/webapp/appbuild.js':['src/main/webapp/test/index.js']
+				}
+			}
+		},
 	});
 
 	grunt.loadNpmTasks('grunt-browserify');

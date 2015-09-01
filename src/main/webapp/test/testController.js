@@ -15,7 +15,7 @@
 //
 //}]);
 
-class testController {
+class TestController {
     constructor() {
         this.name = 'shian';
     }
@@ -23,4 +23,4 @@ class testController {
 
 //testController.$inject = annotation;
 
-export default testController;
+export default TestController;

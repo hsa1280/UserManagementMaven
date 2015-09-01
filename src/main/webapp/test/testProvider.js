@@ -11,7 +11,7 @@ function testProvider($stateProvider) {
             views: {
                 'content@': {
                     templateUrl: 'test.html',
-                    controller: 'testController'
+                    controller: 'TestController as testController'
                 }
             }
         });
