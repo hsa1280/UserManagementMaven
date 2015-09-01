@@ -8,9 +8,10 @@ function testProvider1($stateProvider) {
     $stateProvider.
         state('test1', {
             url: '/test1',
+            parent: 'test',
             views: {
                 'content@': {
-                    templateUrl: 'test1.html',
+                    templateUrl: 'test1/test1.html',
                     controller: 'TestController1 as testController1'
                 }
             }
