@@ -4,10 +4,10 @@
 
 import angular from 'angular';
 import 'angular-ui-router';
-import TestController from './testController';
 import testProvider from './testProvider';
+import test1 from './test1';
+import test2 from './test2';
 
 export default angular.
-    module('sportsStore', ['ui.router']).
-    config(testProvider).
-    controller('TestController', TestController);
+    module('sportsStore', ['ui.router', test1.name, test2.name]).
+    config(testProvider);

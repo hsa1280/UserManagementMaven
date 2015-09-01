@@ -15,12 +15,12 @@
 //
 //}]);
 
-class TestController {
+class TestController2 {
     constructor() {
-        this.name = 'shian';
+        this.test2 = 'test2';
     }
 }
 
 //testController.$inject = annotation;
 
-export default TestController;
+export default TestController2;
