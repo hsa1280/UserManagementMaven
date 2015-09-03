@@ -1,6 +1,6 @@
-<div class="panel panel-default row" ng-controller="productListCtrl" ng-hide="data.error">
+<div class="panel panel-default row" ng-hide="data.error">
     <div class="col-xs-3">
-        <div class=" btn btn-block btn-default btn-lg" ng-click="selectItem()">
+        <div class=" btn btn-block btn-default btn-lg" ng-click="productListController.selectItem()">
             Home
         </div>
          <div ng-repeat="product in data.products | unique: 'category'" class=" btn btn-block btn-default btn-lg" ng-click="selectItem(product)"  ng-class="getCategoryClass(product)">

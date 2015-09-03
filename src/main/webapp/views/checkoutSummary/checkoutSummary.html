@@ -1,16 +1,16 @@
-<div class="lead" ng-controller="checkoutCtrl">
+<div class="lead">
 	Your cart
 	<table class="table">
 		<thead>
 			<tr><th>Quantity</th><th>Item</th><th class="text-right">Price</th><th class="text-right">Subtotal</th></tr>
 		</thead>
-		<tbody ng-repeat="product in cartData">
+		<tbody ng-repeat="product in checkoutController.cartData">
 			<tr>
 				<td>{{product.count}}</td>
 				<td>{{product.name}}</td>
 				<td class="text-right">{{product.price | currency}}</td>
-				<td class="text-right">{{getSubtotal(product) | currency}}</td>
-				<td><button ng-click="removeProduct(product)" class="btn btn-sm btn-warning">Remove</button></td>
+				<td class="text-right">{{checkoutController.getSubtotal(product) | currency}}</td>
+				<td><button ng-click="checkoutController.removeProduct(product)" class="btn btn-sm btn-warning">Remove</button></td>
 			</tr>
 
 		</tbody>
@@ -18,7 +18,7 @@
 			<tr>
 				<td colspan="3" class="text-right">Total:</td>
 				<td class="text-right">
-					{{getTotal() | currency}}
+					{{checkoutController.getTotal() | currency}}
 				</td>
 			</tr>
 		</tfoot>

@@ -8,11 +8,11 @@ angular.module("sportsStore", ["customFilters", "cart", "ngRoute"])
     .config(function($routeProvider) {
 
         $routeProvider.when("/checkout", {
-            templateUrl: "views/checkoutSummary.html"
+            templateUrl: "views/checkoutSummary/checkoutSummary.html"
         });
 
         $routeProvider.when("/products", {
-            templateUrl: "views/productList.html"
+            templateUrl: "views/productList/productList.html"
         });
 
         $routeProvider.when("/complete", {
@@ -24,6 +24,24 @@ angular.module("sportsStore", ["customFilters", "cart", "ngRoute"])
         });
 
         $routeProvider.otherwise({
-            templateUrl: "views/productList.html"
+            templateUrl: "views/productList/productList.html"
         });
+    });
+
+
+angular.module("sportsStore")
+    .constant("dataUrl", "/UserManagementMaven/api/products")
+    .controller("sportsStoreCtrl", function ($scope, $http, $location,
+                                             dataUrl, cart) {
+
+        $scope.data = {
+        };
+
+        $http.get(dataUrl)
+            .success(function (data) {
+                $scope.data.products = data;
+            })
+            .error(function (error) {
+                $scope.data.error = error;
+            });
     });
