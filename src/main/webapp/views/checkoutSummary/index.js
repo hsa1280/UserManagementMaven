@@ -8,4 +8,4 @@ import checkoutSummaryStateProvider from './checckoutSummaryStateProvider';
 export default angular.
     module('checkoutModule', []).
     config(checkoutSummaryStateProvider).
-    controller('CheckoutController', CheckoutController);
+    controller('CheckoutControoler', CheckoutControoler);

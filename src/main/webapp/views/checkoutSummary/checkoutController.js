@@ -31,7 +31,7 @@ const annotation = ['cart'];
 class CheckoutController {
 
 	constructor(cart) {
-		//this.cart = cart;
+		this.cart = cart;
 		this.cartData = cart.getProducts();
 	}
 

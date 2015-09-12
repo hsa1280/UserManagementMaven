@@ -15,13 +15,13 @@ angular.module("sportsStore", ["customFilters", "cart", "ngRoute"])
             templateUrl: "views/productList/productList.html"
         });
 
-        $routeProvider.when("/complete", {
-            templateUrl: "views/thankYou.html"
-        });
-
-        $routeProvider.when("/placeOrder", {
-            templateUrl: "views/placeOrder.html"
-        });
+        //$routeProvider.when("/complete", {
+        //    templateUrl: "views/thankYou.html"
+        //});
+        //
+        //$routeProvider.when("/placeOrder", {
+        //    templateUrl: "views/placeOrder.html"
+        //});
 
         $routeProvider.otherwise({
             templateUrl: "views/productList/productList.html"
@@ -29,19 +29,19 @@ angular.module("sportsStore", ["customFilters", "cart", "ngRoute"])
     });
 
 
-angular.module("sportsStore")
-    .constant("dataUrl", "/UserManagementMaven/api/products")
-    .controller("sportsStoreCtrl", function ($scope, $http, $location,
-                                             dataUrl, cart) {
-
-        $scope.data = {
-        };
-
-        $http.get(dataUrl)
-            .success(function (data) {
-                $scope.data.products = data;
-            })
-            .error(function (error) {
-                $scope.data.error = error;
-            });
-    });
+//angular.module("sportsStore")
+//    .constant("dataUrl", "/UserManagementMaven/api/products")
+//    .controller("sportsStoreCtrl", function ($scope, $http, $location,
+//                                             dataUrl, cart) {
+//
+//        $scope.data = {
+//        };
+//
+//        $http.get(dataUrl)
+//            .success(function (data) {
+//                $scope.data.products = data;
+//            })
+//            .error(function (error) {
+//                $scope.data.error = error;
+//            });
+//    });

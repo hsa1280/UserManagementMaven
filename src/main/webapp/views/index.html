@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="sportsStore">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script src="../appbuild.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse">
+        <a class="navbar-brand" href="#/productList">SPORTS STORE</a>
+        <cart-summary></cart-summary>
+    </div>
+<!--<div class="alert laert-danger" ng-show="data.error">-->
+    <!--<p>Error({{data.error.message}}). The product data was not loaded.</p>-->
+<!--</div>-->
+
+<div ui-view="content"></div>
+</body>
+</html>

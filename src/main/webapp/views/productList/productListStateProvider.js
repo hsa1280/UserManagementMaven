@@ -10,7 +10,7 @@ function productListStateProvider($stateProvider) {
             url: '/productList',
             views: {
                 'content@': {
-                    templateUrl: 'productList.html',
+                    templateUrl: 'productList/productList.html',
                     controller: 'ProductListController as productListController'
                 }
             }
