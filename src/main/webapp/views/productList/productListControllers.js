@@ -10,17 +10,17 @@ class ProductListController {
         this.$http = $http;
         this.cart = cart;
         this.selectedCategory = null;
+        this.hightLightClass = 'btn-primary';
         this.getProducts();
     }
 
     getProducts() {
-        self = this;
         this.$http.get('/UserManagementMaven/api/products')
-            .success(function (response) {
-                self.data.products = response;
+            .success( response => {
+                this.data.products = response;
             })
-            .error(function (error) {
-                self.data.error = error;
+            .error( error => {
+                this.data.error = error;
             })
     }
 
@@ -38,11 +38,11 @@ class ProductListController {
     }
 
     getCategoryClass(item) {
-        return this.selectedPage == item ? 'btn-primary' : null;
+        return this.selectedCategory == item ? this.hightLightClass : null;
     }
 
     getPageClass(page) {
-        return this.selectedPage == page ? 'btn-primary' : null;
+        return this.selectedPage == page ? this.hightLightClass : null;
     }
 
     addProduct(item) {
