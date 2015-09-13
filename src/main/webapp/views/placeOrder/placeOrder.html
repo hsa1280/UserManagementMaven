@@ -13,55 +13,55 @@
 <div class="well">
 	<h1>Check out now</h1>
 	<p>Please enter your details, and we'll ship your goods right away!</p>
-	<form name="shippingForm" novalidate class="form-group">
+	<form name="placeOrderController.shippingForm" novalidate class="form-group">
 		<h2>Ship to</h2>
 		<div class="form-group">
 			<label for="name"><b>Name</b></label>
-			<input class="form-control" name="name" type="text" ng-model="shipping.name" required />
-			<span class="error" ng-show="shippingForm.name.$error.required">
+			<input class="form-control" name="name" type="text" ng-model="placeOrderController.shipping.name" required />
+			<span class="error" ng-show="placeOrderController.shippingForm.name.$error.required">
 				Enter your name!
 			</span>
 		</div>
 		<h2>Address</h2>
 		<div class="form-group">
 			<label for="street"><b>Street Address</b></label>
-			<input class="form-control" name="street" type="text" ng-model="shipping.street" required />
-			<span class="error" ng-show="shippingForm.street.$error.required">
+			<input class="form-control" name="street" type="text" ng-model="placeOrderController.shipping.street" required />
+			<span class="error" ng-show="placeOrderController.shippingForm.street.$error.required">
 				Please enter your street address!
 			</span>
 		</div>
 		<div class="form-group">
 			<label for="city"><b>City</b></label>
-			<input class="form-control" name="city" type="text" ng-model="shipping.city" required />
-			<span class="error" ng-show="shippingForm.city.$error.required">
+			<input class="form-control" name="city" type="text" ng-model="placeOrderController.shipping.city" required />
+			<span class="error" ng-show="placeOrderController.shippingForm.city.$error.required">
 				Please enter your city!
 			</span>
 		</div>
 		<div class="form-group">
 			<label for="state"><b>State</b></label>
-			<input class="form-control" name="state" type="text" ng-model="shipping.state" required />
-			<span class="error" ng-show="shippingForm.state.$error.required">
+			<input class="form-control" name="state" type="text" ng-model="placeOrderController.shipping.state" required />
+			<span class="error" ng-show="placeOrderController.shippingForm.state.$error.required">
 				Please enter your state!
 			</span>
 		</div>
 		<div class="form-group">
 			<label for="zip"><b>Zip</b></label>
-			<input class="form-control" name="zip" type="text" ng-model="shipping.zip" required />
-			<span class="error" ng-show="shippingForm.zip.$error.required">
+			<input class="form-control" name="zip" type="text" ng-model="placeOrderController.shipping.zip" required />
+			<span class="error" ng-show="placeOrderController.shippingForm.zip.$error.required">
 				Please enter your zip!
 			</span>
 		</div>
 		<div class="form-group">
 			<label for="country"><b>Country</b></label>
-			<input class="form-control" name="country" type="text" ng-model="shipping.country" required />
-			<span class="error" ng-show="shippingForm.country.$error.required">
+			<input class="form-control" name="country" type="text" ng-model="placeOrderController.shipping.country" required />
+			<span class="error" ng-show="placeOrderController.shippingForm.country.$error.required">
 				Please enter your country!
 			</span>
 		</div>
 		<h3>Opetions</h3>
 		<div class="checkbox">
 			<label>
-				<input name="giftwrap" type="checkbox" ng-model="shipping.giftwrap" />
+				<input name="giftwrap" type="checkbox" ng-model="placeOrderController.shipping.giftwrap" />
 				Gift wrap these items
 			</label>
 		</div>
@@ -70,7 +70,7 @@
 		<a href="#/complete" class="btn btn-primary" ng-disabled="shippingForm.$invalid" ng-clcik="sendOrder(data.shipping)">Complete order</a>
 	</div> -->
     <div class="text-center">
-        <button ng-disabled="shippingForm.$invalid"
+        <button ng-disabled="placeOrderController.shippingForm.$invalid"
                 ng-click="sendOrder(shipping)"
                 class="btn btn-primary">
             Complete order

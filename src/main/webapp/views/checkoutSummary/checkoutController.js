@@ -26,12 +26,13 @@
 //	}
 //})
 
-const annotation = ['cart'];
+const annotation = ['cart', '$state'];
 
 class CheckoutController {
 
-	constructor(cart) {
+	constructor(cart, $state) {
 		this.cart = cart;
+		this.$state = $state;
 		this.cartData = cart.getProducts();
 	}
 
@@ -53,6 +54,14 @@ class CheckoutController {
 
 	removeProduct(product) {
 		this.cart.removeProduct(product.id);
+	}
+
+	continueToShopping() {
+		this.$state.go('productList');
+	}
+
+	goToPlaceOrder() {
+		this.$state.go('placeOrder');
 	}
 }
 
