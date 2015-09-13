@@ -12,7 +12,7 @@ describe('version', function() {
 
     beforeEach(angular.mock.module('myApp.services'));
 
-    it('should return current version', function(version) {
+    it('should return current version', inject(function(version) {
         expect(version).toEqual('0.1');
-    });
+    }));
 });

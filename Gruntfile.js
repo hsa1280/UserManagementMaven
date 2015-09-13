@@ -29,7 +29,7 @@ module.exports = function(grunt) {
                 singleRun: true,
                 options: {
                     files: [
-                        'main/webapp/appbuild.min.js',
+                        'main/webapp/appbuild.js',
                         'test/javascript/testbuild.js'
                     ]
                 }
