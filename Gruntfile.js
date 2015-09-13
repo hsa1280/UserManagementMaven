@@ -17,12 +17,28 @@ module.exports = function(grunt) {
 					}
 				},
 				files: {
-					'src/main/webapp/appbuild.js':['src/main/webapp/views/index.js']
+					'src/main/webapp/appbuild.js':['src/main/webapp/views/*.js'],
+					'src/test/javascript/testbuild.js':['src/test/javascript/spec/*.js']
 				}
 			}
 		},
+
+        karma: {
+            unit: {
+                configFile: 'src/test/javascript/karma.conf.js',
+                singleRun: true,
+                options: {
+                    files: [
+                        'main/webapp/appbuild.min.js',
+                        'test/javascript/testbuild.js'
+                    ]
+                }
+            }
+        },
 	});
 
 	grunt.loadNpmTasks('grunt-browserify');
 	grunt.registerTask('default', ['browserify']);
+    grunt.loadNpmTasks('grunt-karma');
+    grunt.registerTask('test', ['karma:unit']);
 };
