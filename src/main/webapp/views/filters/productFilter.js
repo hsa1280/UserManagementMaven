@@ -1,7 +1,6 @@
 /**
  * Created by shian_mac on 9/14/15.
  */
-const annotation = [];
 
 function productFilter() {
 
@@ -18,7 +17,5 @@ function productFilter() {
         return filteredData;
     }
 }
-
-productFilter.$inject = annotation;
 
 export default productFilter;

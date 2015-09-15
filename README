@@ -11,3 +11,7 @@ add a path parameter to the project path by adding it in the server: contextPath
 6. How to run the app:
     a. run mvn spring-boot:run
     b. go to localhost:8080/UserManagementMaven/views/index.html#/productList
+7. If there is no dependency, then we don't need to use const annotation = []
+8. Slice doesn't change the content of data, but Splice changes the data
+9. To run jasmine test, we need to have a karma.conf.js and add a task in Gruntfile.js
+we also need to add karma, karma-chrome-launcher, karma-jasmine, grunt-karma to package.json, angular-mocks is also needed
