@@ -5,7 +5,6 @@ class ProductListController {
     constructor(cart, $http) {
         this.selectedPage = 1;
         this.pageSize = 3;
-        //this.data = cart.getProductList();
         this.data = {};
         this.$http = $http;
         this.cart = cart;
