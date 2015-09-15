@@ -12,7 +12,6 @@
          </div>
     </div>
     <div class="col-xs-8">
-        <!--<div class="well" ng-repeat="item in productListController.data.products | filter: productListController.productsFilter(item)">-->
         <div class="well" ng-repeat=" item in productListController.data.products | productFilter: productListController.selectedCategory | range: productListController.selectedPage : productListController.pageSize ">
             <h3>
                 <strong>{{item.name}}</strong>

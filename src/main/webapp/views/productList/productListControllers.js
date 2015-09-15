@@ -14,13 +14,11 @@ class ProductListController {
     }
 
     getProducts() {
-        this.$http.get('/UserManagementMaven/api/products')
-            .success( response => {
-                this.data.products = response;
-            })
-            .error( error => {
-                this.data.error = error;
-            })
+        this.cart.getProductList().then( response =>{
+            this.data.products = response;
+        }, error => {
+            this.data.error = error;
+        })
     }
 
     selectItem(item) {
@@ -30,10 +28,6 @@ class ProductListController {
 
     selectPage(newPage) {
         this.selectedPage = newPage;
-    }
-
-    productsFilter(item) {
-        return this.selectedCategory == null || this.selectedCategory == item.category;
     }
 
     getCategoryClass(item) {

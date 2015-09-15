@@ -8,3 +8,6 @@ The problems I faced:
 $http.get('/UserManagement/page/data')
 5. If we use spring-boot, there is no web.xml and WebApplicationConfig to define the viewResolver, so the project path will be: localhost:8080/html file, this rule also applies to any api call; we can
 add a path parameter to the project path by adding it in the server: contextPath: /UserManagementMaven, which is in resources/config/application.yml
+6. How to run the app:
+    a. run mvn spring-boot:run
+    b. go to localhost:8080/UserManagementMaven/views/index.html#/productList

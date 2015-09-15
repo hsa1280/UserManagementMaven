@@ -3,10 +3,6 @@ const annotation = ['$http'];
 function cart( $http ) {
 
 	var cartData = [];
-	var data = {
-		products: [],
-		error: {}
-	};
 
 	return {
 
@@ -40,16 +36,7 @@ function cart( $http ) {
 		},
 
 		getProductList: function() {
-			$http.get('/UserManagementMaven/api/products')
-				.success(function (response) {
-					data.products = response;
-					console.log();
-				})
-				.error(function (error) {
-					data.error = error;
-				})
-
-			return data;
+			return $http.get('/UserManagementMaven/api/products').then(response => response.data);
 		}
 	}
 }
