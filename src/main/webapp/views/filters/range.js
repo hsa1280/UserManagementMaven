@@ -11,7 +11,7 @@ function range( $filter ) {
                 return [];
             }
             else {
-                return $filter("limitTo")( data.splice( start_index ), size);
+                return $filter("limitTo")( data.slice( start_index ), size);
             }
         }
         else {
