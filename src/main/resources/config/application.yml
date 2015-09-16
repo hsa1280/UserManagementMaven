@@ -1,14 +1,20 @@
-spring:
-    application:
-        name: AutoDone-Executor
-    datasource:
-        driverClassName: com.mysql.jdbc.Driver
-        url: jdbc:mysql://localhost/test
-server:
-    port: 8080
-    contextPath: /UserManagementMaven
+#spring:
+#    application:
+#        name: AutoDone-Executor
+#    datasource:
+#        driverClassName: com.mysql.jdbc.Driver
+#        url: jdbc:mysql://localhost/test
+#server:
+#    port: 8080
+#    contextPath: /UserManagementMaven
 
-db:
-    url: jdbc:mysql://localhost:3306/mysql
-    userName: root
-    passWord: root
+#db:
+#    url: jdbc:mysql://localhost:3306/mysql
+#    userName: root
+#    passWord: root
+#
+#hibernate:
+#
+#    dialect: org.hibernate.dialect.MySQLDialect
+#    hbm2ddl.auto: update
+#    ejb.naming_strategy: org.hibernate.cfg.ImprovedNamingStrategy
