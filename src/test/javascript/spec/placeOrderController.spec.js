@@ -15,25 +15,28 @@ describe('placeOrderController', function() {
             cart = _cart_;
             http = $http;
 
-            if (callback) {
-                callback();
-            }
-
             controller = $controller('ProductListController', {
                 cart: cart,
                 $http: http
             });
+
+            if (callback) {
+                callback();
+            }
         })
     }
 
     describe('Default values', function() {
         it('constructor', function() {
-            initialize();
+            initialize(function() {
+                spyOn(controller, 'getProducts');
+            });
             expect(controller.selectedPage).toEqual(1);
             expect(controller.pageSize).toEqual(3);
             expect(controller.data).toEqual({});
             expect(controller.selectedCategory).toBeNull();
             expect(controller.hightLightClass).toEqual('btn-primary');
+            //expect(controller.getProducts).toHaveBeenCalled();
         });
     })
 })
