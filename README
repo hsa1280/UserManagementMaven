@@ -15,3 +15,24 @@ add a path parameter to the project path by adding it in the server: contextPath
 8. Slice doesn't change the content of data, but Splice changes the data
 9. To run jasmine test, we need to have a karma.conf.js and add a task in Gruntfile.js
 we also need to add karma, karma-chrome-launcher, karma-jasmine, grunt-karma to package.json, angular-mocks is also needed
+
+
+
+
+Start/Stop/Restart mysql on Mac:
+
+sudo /usr/local/mysql/support-files/mysql.server start
+
+sudo /usr/local/mysql/support-files/mysql.server stop
+
+sudo /usr/local/mysql/support-files/mysql.server restart
+
+On the Arch Linux:
+
+You can start the MariaDB daemon with:
+
+/usr/bin/mysqld_safe --datadir='/var/lib/mysql'
+
+to see the database:
+
+mysql -u root -p
